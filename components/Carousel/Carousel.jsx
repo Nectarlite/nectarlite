@@ -24,7 +24,7 @@ const Carousel = () => {
     useEffect(() => {
         const timer = setTimeout(() => {
             clickNext();
-        }, 5000);
+        }, 7000);
         return () => {
             clearTimeout(timer);
         }
@@ -32,17 +32,17 @@ const Carousel = () => {
 
     return (
         <>
-            <div className='slantDivB bg-gray-500 p-2'>
+            <div className='slantDivB bg-gray-500 p-2 smc:h-screen'>
                 <div className='grid place-items-center w-full mx-auto max-w-5xl xl:w-full shadow-2xl rounded-2xl '>
-                    <div className='w-full grid grid-cols-2 smn:grid smn:grid-cols-1 gap-4  transition-transform ease-in-out duration-500 rounded-2xl'>
+                    <div className='w-full grid grid-cols-2 md:grid md:grid-cols-1 gap-4  transition-transform ease-in-out duration-500 rounded-2xl'>
                         {images.map((pic, idx) => (
                             <div className={`${idx === activeImageIndex
                                 ? "block smn:flex smn:w-full w-full h-[60vh] object-cover transition-all duration-500 ease-in-out" : "hidden"}  `} key={idx}>
                                 <Image
                                     src={pic.src}
                                     alt='Logo'
-                                    width={400}
-                                    height={400}
+                                    width={350}
+                                    height={350}
                                     className='w-full h-full object-cover smn:rounded-3xl rounded-tl-3xl rounded-bl-3xl'
                                 />
 

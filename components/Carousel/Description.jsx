@@ -6,13 +6,13 @@ import { motion } from "framer-motion";
 const Description = ({ clickNext, clickPrev, activeImageIndex }) => {
   return (
     <>
-      <div className="grid place-items-center w-full smn:absolute smn:rounded-3xl smn:right-0 smn:bg-black/50 bg-[#e7dfd9] relative rounded-tr-3xl rounded-br-3xl ">
+      <div className="grid place-items-center w-full md:absolute md:rounded-3xl md:right-0 md:bg-black/50 bg-[#e7dfd9] relative rounded-tr-3xl rounded-br-3xl ">
         {/* <div className='uppercase text-sm absolute right-4 top-0 underline-offset-4 underline '>Programes</div> */}
         {images.map((elem, idx) => (
           <div
             className={
               idx === activeImageIndex
-                ? "block p-4 w-full h-[60vh] object-cover transition-all duration-500 ease-in-out"
+                ? "block p-4 w-full h-[60vh] md:h-full object-cover transition-all duration-500 ease-in-out"
                 : "hidden"
             }
             key={idx}
@@ -33,10 +33,10 @@ const Description = ({ clickNext, clickPrev, activeImageIndex }) => {
               }}
               className="w-full"
             >
-              <div className="py-8 text-5xl font-extrabold mdd:text-xl ">
+              <div className="py-8 text-3xl font-extrabold mdd:text-xl ">
                 {elem.title}
               </div>
-              <div className="leading-relaxed smn:text-white mdd:h-full font-medium text-base tracking-wide h-full italic text-gray-600">
+              <div className="leading-relaxed md:text-white mdd:h-full font-medium text-base tracking-wide h-full italic text-gray-600">
                 {""}
                 {elem.description}
               </div>

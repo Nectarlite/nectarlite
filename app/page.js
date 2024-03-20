@@ -27,8 +27,7 @@ export default function Home() {
               className="pl-4 w-full xl:text-white h-full space-y-8 gap-[4vh] xl:grid xl:place-content-center xl:place-items-center animate__animated animate__fadeInLeft "
               data-aos="fade-left"
             >
-              <h1 className="font-thin font-serif text-6xl xl:text-center mdl:text-4xl smb:text-2xl ">
-                {/* Become an Elite Software Engineer */}
+              <h1 className="font-thin xl:bg-black font-serif text-6xl xl:text-center mdl:text-4xl smb:text-2xl ">
                 <Typewriter
                   options={{
                     strings: [
@@ -104,7 +103,7 @@ export default function Home() {
             <h2 className="underline uppercase text-4xl font-bold mdl:text-4xl smg:text-2xl ">
               Build a Tech Career Now
             </h2>
-            <p className="text-xl font-medium mdl:text-lg smg:text-base smg:p-4 ">
+            <h1 className="text-xl font-medium mdl:text-lg smg:text-base smg:p-4 ">
               Do you want to change jobs and take up an IT career? Are you a
               graduate who wants to build a career in IT? Do you have some
               skills in IT but you want to build a career path that can give you
@@ -115,13 +114,13 @@ export default function Home() {
               Are you bothered about location?. Dont worry, our remote classes
               is here for you, where you can learn from any location with good
               internet and electricity access at your convenient.
-            </p>
-            <Link
+            </h1>
+            {/* <Link
               href="/learnmore"
               className="text-xl mt-4 text-black font-bold capitalize hover:border-b-2 hover:border-b-purple-500"
             >
               learn more
-            </Link>
+            </Link> */}
           </div>
         </div>
       </section>

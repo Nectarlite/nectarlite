@@ -1,18 +1,18 @@
-"use client"
-import Image from 'next/image'
-import React, { useState } from 'react'
-import images from "../assets/index"
+"use client";
+import Image from "next/image";
+import React, { useState } from "react";
+import images from "../assets/index";
 import { TiMessages } from "react-icons/ti";
 import { IoMdClose } from "react-icons/io";
-import { useRouter } from 'next/navigation';
+import { useRouter } from "next/navigation";
 import { FaWhatsapp } from "react-icons/fa";
 
 const Needhelp = () => {
-  const router = useRouter()
-  const [openChatBox, setOpenChatBox] = useState(false)
-  const [fname, setFname] = useState("")
-  const [email, setEmail] = useState("")
-  const [desc, setDesc] = useState("")
+  const router = useRouter();
+  const [openChatBox, setOpenChatBox] = useState(false);
+  const [fname, setFname] = useState("");
+  const [email, setEmail] = useState("");
+  const [desc, setDesc] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -35,17 +35,16 @@ const Needhelp = () => {
         alert("Request sent successfully.");
         router.push("/");
       } else {
-        throw new Error("Failed to Submit Request")
+        throw new Error("Failed to Submit Request");
       }
-
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
-  }
+  };
 
   return (
     <>
-      <section className='relative'>
+      <section className="relative">
         {/* <div onClick={() => setOpenChatBox(!openChatBox)} className='fixed bottom-4 z-10 right-6 text-black cursor-pointer bg-white border-2 border-gray-500 rounded-full w-[200px] h-[70px] flex space-x-2 text-center '>
           {openChatBox ? (
             <>
@@ -69,13 +68,15 @@ const Needhelp = () => {
             </>
           )}
         </div> */}
-        <div className='fixed bottom-4 z-10 right-6 text-black cursor-pointer bg-white border-2 border-gray-500 rounded-full w-[200px] h-[70px] flex space-x-2 text-center '>
-          <div className='h-full w-[70px] flex items-center justify-center bg-purple-600 rounded-full '>
-            <FaWhatsapp size={50} className='text-white' />
+        <div className="fixed bottom-4 z-10 right-6 text-black cursor-pointer bg-white border-2 border-gray-500 rounded-full w-[200px] h-[70px] flex space-x-2 text-center ">
+          <div className="h-full w-[70px] flex items-center justify-center bg-purple-600 rounded-full ">
+            <a href="https://wa.me/message/JHYC2XPRHUE6H1" target="_blank" className="">
+              <FaWhatsapp size={50} className="text-white" />
+            </a>
           </div>
-          <div className='py-3 text-start '>
-            <h1 className='text-black capitalize'>need help?</h1>
-            <h3 className='text-black capitalize text-xs'>chat with us!</h3>
+          <div className="py-3 text-start ">
+            <a href="https://wa.me/message/JHYC2XPRHUE6H1" target="_blank" className="text-black capitalize">need help?</a> <br />
+            <a href="https://wa.me/message/JHYC2XPRHUE6H1" target="_blank" className="text-black capitalize text-xs">chat with us!</a>
           </div>
         </div>
 
@@ -111,9 +112,9 @@ const Needhelp = () => {
             </div>
           </div>
         </div> */}
-      </section >
+      </section>
     </>
-  )
-}
+  );
+};
 
-export default Needhelp
+export default Needhelp;
