@@ -1,0 +1,150 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .bgImage{
+    background-image: url("../components/assets/finegirltech.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  body{
+    @apply scroll-smooth
+  }
+}
+
+.slick-slide > div {
+  margin: 0 10px;
+}
+
+.slantDiv{
+  position: relative;
+  width: 100%;
+  height: none;
+  background-color: none;
+  box-sizing: border-box;
+}
+
+.slantDiv::after{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: '';
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit;
+  transform-origin: top right;
+  transform: skewY(4deg);
+  z-index: -1;
+}
+
+.slantDiv::before{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: '';
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit;
+  /* transform-origin: top right; */
+  transform: skewY(-6deg);
+  z-index: -1;
+}
+
+/* SlantDivA start */
+.slantDivA{
+  position: relative;
+  width: 100%;
+  height: none;
+  background-color: none;
+  box-sizing: border-box;
+}
+
+.slantDivA::before{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: '';
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit;
+  transform-origin: top right;
+  transform: skewY(-6deg);
+  z-index: -1;
+}
+
+.slantDivA::after{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: '';
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit;
+  transform-origin: bottom left;
+  transform: skewY(6deg);
+  z-index: -1;
+}
+/* SlantDivA ends */
+
+
+/* slantDivB starts*/
+.slantDivB{
+  position: relative;
+  width: 100%;
+  height: 500px;
+  background-color: none;
+  box-sizing: border-box;
+}
+
+.slantDivB::after{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: '';
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit;
+  transform-origin: top right;
+  transform: skewY(4deg);
+  z-index: -1;
+}
+/* slantDivB ends */
+
+/* slantDivB starts*/
+.slantDivC{
+  position: relative;
+  width: 100%;
+  height: 500px;
+  background-color: none;
+  box-sizing: border-box;
+}
+
+.slantDivC::after{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: '';
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit;
+  transform-origin: top right;
+  transform: skewY(4deg);
+  z-index: -1;
+}
+/* slantDivB ends */
+
+
